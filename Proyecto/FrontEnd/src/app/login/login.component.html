@@ -1,0 +1,26 @@
+<div class="body">
+    <h1>Inicio de sesión </h1>
+    <div class="clear-loading spinner">
+        <span></span>
+    </div>
+    <div class="w3ls-login box box--big">
+        <!-- form starts here -->
+        <form ngNativeValidate #f="ngForm" (ngSubmit)="ingresar(f)" class="form-login">
+            <div class="agile-field-txt">
+                <label><i class="fa fa-user" aria-hidden="true"></i> Nombre de usuario/Número de cédula </label>
+                <input  type="text" ngModel name="username" class="form-control" placeholder="Digite nombre de usuario o número de cédula " required />
+            </div>
+            <div class="agile-field-txt">
+                <label><i class="fa fa-unlock-alt" aria-hidden="true"></i> contraseña </label>
+                <input id="pass" type="password" ngModel name="password" class="form-control" placeholder="Digite la contraseña" required="" id="myInput" />
+                
+                <div class="agile-right">
+                    <a href="#">Olvidó la contraseña?</a>
+                </div>
+            </div>
+  
+            <input type="submit" value="INICIAR SESIÓN" [disabled]="ingresando">
+        </form>
+    </div>
+    <!-- //form ends here -->
+</div>
